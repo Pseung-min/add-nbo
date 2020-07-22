@@ -22,19 +22,8 @@ int main(int argc, char *argv[])
     nbo2 = get_nbo(fp2);
 
     printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n", nbo1, nbo1, nbo2, nbo2, nbo1+nbo2, nbo1+nbo2);
-    /*
-    uint32_t hn1, hn2;
-    fread(&hn1, sizeof(uint32_t), 1, fp1);
-    fread(&hn2, sizeof(uint32_t), 1, fp2);
-
-    uint32_t nn1, nn2, s;
-    nn1 = htonl(hn1);
-    nn2 = htonl(hn2);
-    s = nn1 + nn2;
-
-    printf("%d(0x%x) + %d(0x%x) = %d(0x%x)\n", nn1, nn1, nn2, nn2, s, s);
 //    1000(0x3e8) + 500(0x1f4) = 1500(0x5dc)
-*/
+
     fclose(fp2);
     fclose(fp1);
 
